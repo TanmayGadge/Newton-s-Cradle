@@ -23,16 +23,16 @@ function setup() {
 	world = engine.world;
 
 	roof = new Ground(400, 100, 600, 20);
-	
-
-	bob1 = new Bob(200, 500, 40);
-	bob2 = new Bob(300, 500, 40);
-	bob3 = new Bob(400, 500, 40);
-	bob4 = new Bob(500, 500, 40);
-	bob5 = new Bob(600, 495, 40);
 
 
-	
+	bob1 = new Bob(200, 508, 40);
+	bob2 = new Bob(300, 507.5, 40);
+	bob3 = new Bob(400, 506, 40);
+	bob4 = new Bob(500, 503.5, 40);
+	bob5 = new Bob(600, 500, 40);
+
+
+
 
 
 
@@ -40,8 +40,7 @@ function setup() {
 	rope2 = new Rope(bob2.body, roof.body, -120, 0);
 	rope3 = new Rope(bob3.body, roof.body, -40, 0);
 	rope4 = new Rope(bob4.body, roof.body, 40, 0);
-	rope5 = new Rope(bob5.body, roof.body, 110, 0);
-
+	rope5 = new Rope(bob5.body, roof.body, 120, 0);
 
 
 
@@ -54,9 +53,14 @@ function setup() {
 
 function draw() {
 	background("white");
+	
+	
+
+	
+
 
 	roof.display();
-	
+
 
 	rope1.display();
 	rope2.display();
@@ -70,12 +74,14 @@ function draw() {
 	bob4.display();
 	bob5.display();
 
+
 }
 
 function keyPressed() {
 	if (keyCode === UP_ARROW) {
-		Body.applyForce(bob1.body, bob1.body.position, { x: -800, y: 0 });
+		Body.applyForce(bob1.body, bob1.body.position, { x: -500, y: 0 });
 		
+
 	}
 
 
